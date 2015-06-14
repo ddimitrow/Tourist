@@ -1,0 +1,9 @@
+c:\users\diyan\documents\visual studio 2013\Projects\TouristWebAPI\TouristWebAPI\bin\TouristWebAPI.dll.config
+c:\users\diyan\documents\visual studio 2013\Projects\TouristWebAPI\TouristWebAPI\bin\TouristWebAPI.dll
+c:\users\diyan\documents\visual studio 2013\Projects\TouristWebAPI\TouristWebAPI\bin\TouristWebAPI.pdb
+c:\users\diyan\documents\visual studio 2013\Projects\TouristWebAPI\TouristWebAPI\bin\JsonServices.dll
+c:\users\diyan\documents\visual studio 2013\Projects\TouristWebAPI\TouristWebAPI\bin\JsonServices.Web.dll
+c:\users\diyan\documents\visual studio 2013\Projects\TouristWebAPI\TouristWebAPI\bin\Newtonsoft.Json.dll
+c:\users\diyan\documents\visual studio 2013\Projects\TouristWebAPI\TouristWebAPI\obj\Debug\TouristWebAPI.csprojResolveAssemblyReference.cache
+c:\users\diyan\documents\visual studio 2013\Projects\TouristWebAPI\TouristWebAPI\obj\Debug\TouristWebAPI.dll
+c:\users\diyan\documents\visual studio 2013\Projects\TouristWebAPI\TouristWebAPI\obj\Debug\TouristWebAPI.pdb
