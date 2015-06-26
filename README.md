@@ -53,10 +53,27 @@ CREATE TABLE Route(
 
 
 ###Android Application
+
+Application Name: “Tourist”
+Project Name: TouristAPIClient
+Package Name: com.mytouristapp.diyan.touristapiclient
+Minimum Required SDK: API 18: Android 2.2 (Froyo)
+
 Before we describe the app I want tо say that all requests to the database are async.
 (AsyncTask enables proper and easy use of the UI thread. This class allows to perform background operations and publish results on the UI thread without having to manipulate threads and/or handlers).
 
-There are 7 activities: Main Activity, Login, Registration, Profile, Create Route, Search for Route, Display Route
+
+Activity Name	      Layout Name
+CreateRouteActivity	activity_create_route.xml
+CreateUserActivity	activity_create_user.xml
+DisplayRouteActivity	activity_display_routes.xml
+LoginActivity	      activity_login.xml
+MainActivity	      activity_main.xml
+RouteActivity	      activity_route.xml
+UserDetailsActivity	activity_user_details.xml
+
+Also there are 4 other classes:
+JSONParser, RestAPI, RouteTable and UserDetailsTable
 
 ####Activity Main
 There is the information about the app, what it is used for. (A.K.A. About)
@@ -82,6 +99,9 @@ Dispay all maches in list view.
 NOTE: Not implemented yet: OnClickListener for the list view. On click it should display information about the route, weather, maybe map.
 
 ####JSONParser class
+
+This class is used to parse JSONObjects.  The API always returns JSONObject type object as respond. So we need to convert those object into some other type to use it in our application. All the methods in JSONParser.java class get a JSONObject type of parameter. Those methods will convert the JSONObjects into some other object type where we can use those converted object in our application directly. Below methods are used to parse methods in my API.
+
 Contains 3 public functions:
 //Parses route details in ArrayList
  public ArrayList<RouteTable> parseRoute(JSONObject object); 
@@ -97,6 +117,11 @@ UserDetailsTable is used to map the database objects into java objects.
 
 ####RestAPI class
 auto generated java file 
+you can get it by typing the following url in the web broser:
+```http://android-sql-client.somee.com/Handler.ashx?ANDROID 
+```
 
+####How to run the application
+To use this application, application needs to access the API through the emulator or using real android device. To access the API, application needs to know the correct URL for the API. You need to provide the correct URL in RestAPI.java class. When you open the “RestAPI.java” class you will see an attribute called urlString with some value. This is the default value for “urlString” attribute in my “RestAPI.java”. This URL cannot accessible through the emulator or in a real device.  So you need to make this URL point to the restful API. (in this case the urlString is http://android-sql-client.somee.com/Handler.ashx?ANDROID 
 
- 
+If you host this restful API in your local host (In your PC) then you can’t access it using a real android device (In other words application will not work in a real device). To access the restful API through a real device you need to host this restful API in a public hosting space. Then application can access it through internet publicly similar to accessing a website.
